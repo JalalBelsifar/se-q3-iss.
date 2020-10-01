@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__author__ = 'Jalal, with help from Joseph, Greg'
+__author__ = 'Jalal, with help from Joseph and Kevin'
 
 import json
 import turtle
@@ -15,7 +15,7 @@ def get_astraunauts():
     astronauts = crew.text
     astronauts = json.loads(astronauts)
     for i in astronauts['people']:
-        print('{} is on the ISS  spaceship orbiting the Earth'.format(
+        print('{} is on board the ISS spaceship'.format(
             i['name']))
 
 
@@ -56,7 +56,7 @@ def create_turtle_display(iss_position, next_run):
     iss.penup()
     iss.goto(iss_position)
     indy_dot = turtle.Turtle()
-    indy_dot.shape('triangle')
+    indy_dot.shape('circle')
     indy_dot.color('yellow')
     indy_dot.penup()
     indy_dot.goto(-86.1349, 40.273502)
